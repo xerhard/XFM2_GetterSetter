@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="serial:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/serial_jar</output-path>
+    <root id="archive" name="serial.jar">
+      <element id="module-output" name="serial" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../LIBRARIES/gson-2.8.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../LIBRARIES/json_simple-1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../LIBRARIES/javafx-sdk-11.0.2/lib/src.zip" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../LIBRARIES/javafx-sdk-11.0.2/lib/javafx-swt.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../LIBRARIES/javafx-sdk-11.0.2/lib/javafx.web.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../LIBRARIES/javafx-sdk-11.0.2/lib/javafx.base.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../LIBRARIES/javafx-sdk-11.0.2/lib/javafx.fxml.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../LIBRARIES/javafx-sdk-11.0.2/lib/javafx.media.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../LIBRARIES/javafx-sdk-11.0.2/lib/javafx.swing.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../LIBRARIES/javafx-sdk-11.0.2/lib/javafx.controls.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../LIBRARIES/javafx-sdk-11.0.2/lib/javafx.graphics.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jSerialComm-2.6.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../LIBRARIES/jSerialComm-2.6.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
