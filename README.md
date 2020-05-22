@@ -21,4 +21,4 @@ Serial device path is hard coded, but should work on Linux, MacOS and Windows, s
 ### TODO
 
 Funny characters like "\\" in DX7 presetnames can produce errors when sending patch to XFM2 buffer.
-
+[Solved]: added regex in DX7syx-to-XFM2patches to prevent non json compliant characters.
