@@ -9,6 +9,14 @@ Application was made for personal usage. I did not code in Java for > 15 years a
 
 Serial device path is hard coded, but should work on Linux, MacOS and Windows, see code
 
+### subset
+You can remove parameter lines and create presets with f.i. effect settings. When put into the XFM2 buffer only these parameters will be set/overwritten.
+
+Same with the DX7 32 different Algorith presets.
+
+When starting with an Init you could read in seperate made subsets and create new patches "Lego" like ;)
+
+
 # GUI
 
 - Buttons speak for them selves
