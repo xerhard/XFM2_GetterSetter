@@ -62,6 +62,7 @@ public class SetParFX4  extends Application {
     String SysLogTxt = "";
     TextArea PArea = new TextArea();
     String PAreaTxt = "0";
+    String patchname = "patchname";
 
     public static void main(String[] args) {
         launch(args);
@@ -73,8 +74,8 @@ public class SetParFX4  extends Application {
 
         FileChooser fileChooser = new FileChooser();
 
-        Button Rbutton = new Button("Read File");
-        Button Sbutton = new Button("Write File");
+        Button Rbutton = new Button("Open XFM2 patch File");
+        Button Sbutton = new Button("Save XFM2 patch File");
         Button Gbutton = new Button("Get Program from buffer");
         Button Pbutton = new Button("Put Program into buffer");
         Button Ibutton = new Button("Init: reads default init file");
@@ -82,12 +83,16 @@ public class SetParFX4  extends Application {
         Button wPbutton = new Button("Write buffer to Program Preset 1 ... 128");
 
         Rbutton.setOnAction(e -> {
+            fileChooser.setTitle("Open XFM2 patch file");
             File selectedFile = fileChooser.showOpenDialog(primaryStage);
             System.out.println(selectedFile.toString());
             readFile(selectedFile.toString());
         });
 
         Sbutton.setOnAction(e -> {
+            fileChooser.setTitle("Save XFM2 patch file");
+            getPatchname();
+            fileChooser.setInitialFileName(patchname+".json");
             File selectedFile = fileChooser.showSaveDialog(primaryStage);
             System.out.println(selectedFile.toString());
             writeFile(selectedFile.toString());
@@ -132,6 +137,20 @@ public class SetParFX4  extends Application {
             ioException.printStackTrace();
         }
         JArea.setText(JAreaTxt);
+    }
+
+
+    // get short patchname
+    public void getPatchname() {
+        String JsonStr = JArea.getText();
+        JSONParser parser = new JSONParser();
+        try {
+            JSONObject jsonObject = (JSONObject) parser.parse(JsonStr);
+            patchname = (String) jsonObject.get("Short_Name");
+        }
+        catch (ParseException e) {
+            e.printStackTrace();
+        }
     }
 
 
