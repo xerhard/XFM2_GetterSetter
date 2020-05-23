@@ -1,3 +1,27 @@
+/*
+ * XFM2_GetterSetter
+ *
+ * This is a javaFX tool to replace the XFM2 spreadsheet and use XFM2 json patch files
+ *
+ *
+ * This file is part of the XFM2_GetterSetter distribution.
+ * - (https://github.com/xerhard/XFM2_GetterSetter).
+ * Copyright (c) 2020 Gerhard Peper
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, version 3.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+
 package eu.GPio;
 
 import com.fazecast.jSerialComm.*;
