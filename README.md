@@ -9,5 +9,25 @@ Application was made for personal usage. I did not code in Java for > 15 years a
 
 Serial device path is hard coded, but should work on Linux, MacOS and Windows, see code
 
+### subset
+You can remove parameter lines and create presets with f.i. effect settings. When put into the XFM2 buffer only these parameters will be set/overwritten.
+
+Same with the DX7 32 different Algorith presets.
+
+When starting with an Init you could read in seperate made subsets and create new patches "Lego" like ;)
 
 
+# GUI
+
+- Buttons speak for them selves
+- First textfield: Preset number
+- Second textfield: Json data, can be edited
+- Bottom textfield: system messages
+
+![GUI](https://github.com/xerhard/XFM2_GetterSetter/blob/master/images/Screenshot_XFM2_GetterSetter.png "UI XFM2_GetterSetter")
+
+### TODO
+
+Funny characters like "\\" in DX7 presetnames can produce errors when sending patch to XFM2 buffer.
+
+[Solved]: added regex in DX7syx-to-XFM2patches to prevent non json compliant characters.
