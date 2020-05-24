@@ -122,7 +122,7 @@ public class SetParFX4  extends Application {
         JArea.setPrefRowCount(30);
         PArea.setPrefRowCount(0);
         SysLog.setPrefRowCount(5);
-        Scene scene = new Scene(vBox, 400, 700);
+        Scene scene = new Scene(vBox, 400, 750);
         primaryStage.setScene(scene);
         primaryStage.show();
         System.out.println("Working Directory = " + System.getProperty("user.dir")); 
@@ -238,7 +238,7 @@ public class SetParFX4  extends Application {
             result[i] = ports[i].getSystemPortName();
             System.out.println(i + " " + result[i]);
         }
-        System.out.println("Aantal gevonden poorten: " + ports.length);
+        System.out.println("Number of found serial devices: " + ports.length);
 
 
         for (i = 0; i < ports.length; i++) {
@@ -254,9 +254,9 @@ public class SetParFX4  extends Application {
 
             boolean Presult = comPort.openPort();
 
-            if ( ports[i].getSystemPortName().matches("ttyUSB.")  ||
+            if ( ports[i].getSystemPortName().equals("ttyUSB1") /* ||
                  ports[i].getSystemPortName().matches("cu.usbserial-.........FCC.") ||
-                 ports[i].getSystemPortName().equals("COM4") ) {
+                 ports[i].getSystemPortName().equals("COM4")*/ ) {
 
                 System.out.println("Found serial device");
 
@@ -276,8 +276,8 @@ public class SetParFX4  extends Application {
                     }
                     //==========================
                     out.write(arr);
-                    System.out.println("Send message to:  ttyUSB1 , Length sent message: " + arr.length);
-                    SysLogTxt = SysLogTxt + "Send message to:  ttyUSB1\nLength sent message: " + arr.length;
+                    System.out.println("Send message to:  XFM2 , Length sent message: " + arr.length);
+                    SysLogTxt = SysLogTxt + "Send message to:  XFM2\nLength sent message: " + arr.length;
                     SysLog.setText(SysLogTxt);
 
                 } catch (IOException e) {
@@ -300,7 +300,7 @@ public class SetParFX4  extends Application {
 
                         int len = in.read(buffer);
                         System.out.println("Number of bytes read: " + len);
-                        SysLogTxt = SysLogTxt + "Number of bytes read: " + len;
+                        SysLogTxt = SysLogTxt + "  Number of bytes read: " + len;
                         SysLog.setText(SysLogTxt);
 
                         comPort.closePort();
@@ -352,7 +352,7 @@ public class SetParFX4  extends Application {
             result[i] = ports[i].getSystemPortName();
             System.out.println(i + " " + result[i]);
         }
-        System.out.println("Aantal gevonden poorten: " + ports.length);
+        System.out.println("Number of found serial devices: " + ports.length);
 
         if (ports.length == 0) {
             SysLogTxt = SysLogTxt + "No serial device found !!\nCheck XFM2 to be connected\n";
@@ -373,8 +373,8 @@ public class SetParFX4  extends Application {
 
             if (ports[i].getSystemPortName().equals("ttyUSB1")) {
 
-                System.out.println("Found ttyUSB1");
-                SysLogTxt = SysLogTxt + "Found ttyUSB1\nStart sending Parameters from: ";
+                System.out.println("Found XFM2");
+                SysLogTxt = SysLogTxt + "Found XFM2\nStart sending Parameters from: ";
                 SysLog.setText(SysLogTxt);
 
 
@@ -485,7 +485,7 @@ public class SetParFX4  extends Application {
             result[i] = ports[i].getSystemPortName();
             System.out.println(i + " " + result[i]);
         }
-        System.out.println("Aantal gevonden poorten: " + ports.length);
+        System.out.println("Number of found serial devices: " + ports.length);
 
         if (ports.length == 0) {
             SysLogTxt = SysLogTxt + "No serial device found !!\nCheck XFM2 to be connected\n";
@@ -507,8 +507,8 @@ public class SetParFX4  extends Application {
 
             if (ports[i].getSystemPortName().equals("ttyUSB1")) {
 
-                System.out.println("Found ttyUSB1");
-                SysLogTxt = SysLogTxt + "Found ttyUSB1\nStart sending Parameters from: ";
+                System.out.println("Found XFM2");
+                SysLogTxt = SysLogTxt + "Found XFM2\nStart sending Parameters from: ";
                 SysLog.setText(SysLogTxt);
                 
                 try (OutputStream out = ports[i].getOutputStream()) {
@@ -526,8 +526,8 @@ public class SetParFX4  extends Application {
                     }
                     //==========================
                     out.write(arr);
-                    System.out.println("Send message to:  ttyUSB1 , Length sent message: " + arr.length);
-                    SysLogTxt = SysLogTxt + "Send message to:  ttyUSB1\nLength sent message: " + arr.length + "\n";
+                    System.out.println("Send message to:  XFM2 , Length sent message: " + arr.length);
+                    SysLogTxt = SysLogTxt + "Send message to:  XFM2\nLength sent message: " + arr.length + "\n";
                     SysLog.setText(SysLogTxt);
 
                 } catch (IOException e) {
