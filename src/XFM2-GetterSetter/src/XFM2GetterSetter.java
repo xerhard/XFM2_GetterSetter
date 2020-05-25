@@ -1,5 +1,5 @@
 /*
- * XFM2_GetterSetter
+ * XFM2-GetterSetter
  *
  * This is a javaFX tool to replace the XFM2 spreadsheet and use XFM2 json patch files
  *
@@ -22,7 +22,7 @@
  */
 
 
-package eu.GPio;
+
 
 import com.fazecast.jSerialComm.*;
 
@@ -54,7 +54,7 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 
-public class SetParFX4  extends Application {
+public class XFM2GetterSetter  extends Application {
 
     TextArea JArea = new TextArea();
     String JAreaTxt = "";
