@@ -7,7 +7,7 @@ Build on Intellij IDEA 2020.1.1 (Community Edition) and java-1.11.0-openjdk-amd6
 ## Folder structure:
 
 
-- **XFM2_GetterSetter** Intellij Project folder
+- **XFM2-GetterSetter** Intellij Project folder
 - **README.md** this file
 
 
