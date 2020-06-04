@@ -23,7 +23,6 @@
 
 
 
-
 import com.fazecast.jSerialComm.*;
 
 import javafx.application.Application;
@@ -121,6 +120,7 @@ public class XFM2GetterSetter  extends Application {
         VBox vBox = new VBox(Rbutton, Sbutton, Gbutton, Pbutton, rPbutton, wPbutton, Ibutton, PArea, JArea, SysLog);
         JArea.setPrefRowCount(30);
         PArea.setPrefRowCount(0);
+        PArea.setText("42");
         SysLog.setPrefRowCount(5);
         Scene scene = new Scene(vBox, 400, 750);
         primaryStage.setScene(scene);
