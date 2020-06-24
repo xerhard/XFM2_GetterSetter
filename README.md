@@ -26,8 +26,3 @@ When starting with an Init you could read in seperate made subsets and create ne
 
 ![GUI](https://github.com/xerhard/XFM2_GetterSetter/blob/master/images/Screenshot_XFM2_GetterSetter.png "UI XFM2_GetterSetter")
 
-### TODO
-
-Funny characters like "\\" in DX7 presetnames can produce errors when sending patch to XFM2 buffer.
-
-[Solved]: added regex in DX7syx-to-XFM2patches to prevent non json compliant characters.
